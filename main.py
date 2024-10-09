@@ -14,6 +14,8 @@ def main():
 
     # Instantiate a player
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+
+    
     
     # Game Loop
     while(1):
@@ -22,6 +24,7 @@ def main():
                 return
         screen.fill("black")
         player.draw(screen)
+        player.update(dt)
         pygame.display.flip()
         
         dt = game.tick(60) / 1000
